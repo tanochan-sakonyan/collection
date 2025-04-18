@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginErrorDialog extends StatelessWidget {
   const LoginErrorDialog({
@@ -21,20 +22,20 @@ class LoginErrorDialog extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'サインインに失敗しました',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+              style: GoogleFonts.montserrat(
                 fontSize: 16,
+                fontWeight: FontWeight.w700,
                 color: Colors.black,
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'お手数ですが、再度お試しください',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+              style: GoogleFonts.montserrat(
                 fontSize: 14,
+                fontWeight: FontWeight.w700,
                 color: Colors.black,
               ),
             ),
@@ -50,11 +51,11 @@ class LoginErrorDialog extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   '閉じる',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  style: GoogleFonts.montserrat(
                     fontSize: 12,
+                    fontWeight: FontWeight.w700,
                     color: Colors.black,
                   ),
                 ),

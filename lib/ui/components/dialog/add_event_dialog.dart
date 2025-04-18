@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mr_collection/constants/base_url.dart';
 import 'package:mr_collection/provider/user_provider.dart';
 import 'package:mr_collection/data/repository/event_repository.dart';
@@ -100,9 +101,9 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
               Center(
                 child: Text(
                   'イベント追加',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  style: GoogleFonts.montserrat(
                         fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
                       ),
                 ),
               ),
@@ -111,9 +112,9 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Event",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  style: GoogleFonts.montserrat(
                         fontSize: 10.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
                       ),
                 ),
               ),
@@ -142,9 +143,10 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
                       padding: EdgeInsets.all(4.0),
                       child: Text(
                         _errorMessage!,
-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        style: GoogleFonts.montserrat(
                               color: Colors.red,
                               fontSize: 10,
+                              fontWeight: FontWeight.w300,
                             ),
                       ),
                     ),
@@ -165,12 +167,13 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
                     //   width: 272,
                     //   height: 48,
                     //   child: ListTile(
-                    //     title: const Text(
+                    //     title: Text(
                     //       '参加者引継ぎ',
-                    //       style: TextStyle(
-                    //         color: Colors.black,
-                    //         fontSize: 14.0,
-                    //       ),
+                    //       style: GoogleFonts.montserrat(
+                    //                               fontSize: 14,
+                    //                               fontWeight: FontWeight.w500,
+                    //                               color: Colors.black
+                    //                             ),
                     //     ),
                     //     trailing: ToggleButton(
                     //       initialValue: isToggleOn,
@@ -188,11 +191,12 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
                       height: 48,
                       child: ListTile(
                         dense: true,
-                        title: const Text(
+                        title: Text(
                           'LINEから参加者取得',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14.0,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black
                           ),
                         ),
                         trailing: IconButton(
@@ -205,12 +209,17 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
                             //LINE認証申請前の臨時ダイアログ
                             showDialog(
                               context: context,
-                              builder: (context) => const AlertDialog(
-                                contentPadding: EdgeInsets.symmetric(
+                              builder: (context) => AlertDialog(
+                                contentPadding: const EdgeInsets.symmetric(
                                     vertical: 56.0, horizontal: 24.0),
                                 content: Text(
                                   'LINEへの認証申請中のため、\n機能解禁までしばらくお待ちください',
                                   textAlign: TextAlign.center,
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ),
                             );
@@ -237,11 +246,12 @@ class AddEventDialogState extends ConsumerState<AddEventDialog> {
                     elevation: 2,
                     shape: const StadiumBorder(),
                   ),
-                  child: const Text(
+                  child: Text(
                     '決定',
-                    style: TextStyle(
+                    style: GoogleFonts.notoSansJp(
                       color: Colors.black,
                       fontSize: 14.0,
+                      fontWeight: FontWeight.w400
                     ),
                   ),
                 ),
